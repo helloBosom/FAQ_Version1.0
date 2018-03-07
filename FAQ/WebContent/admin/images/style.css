@@ -1,0 +1,297 @@
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+textfield {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+CheckBox {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+Radio {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+SELECT {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TEXTAREA {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+INPUT {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.buttons {
+	BORDER-RIGHT: 0px outset; BORDER-TOP: 0px outset; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../images/botton_back.gif); BORDER-LEFT: 0px outset; WIDTH: 75px; CURSOR: hand; BORDER-BOTTOM: 0px outset; HEIGHT: 20px
+}
+.buttons1 {
+	BORDER-RIGHT: 0px outset; BORDER-TOP: 0px outset; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../images/botton_back1.gif); BORDER-LEFT: 0px outset; WIDTH: 75px; CURSOR: hand; BORDER-BOTTOM: 0px outset; HEIGHT: 20px
+}
+.buttons2 {
+	BORDER-RIGHT: 0px outset; BORDER-TOP: 0px outset; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../images/botton_back2.gif); BORDER-LEFT: 0px outset; WIDTH: 25px; CURSOR: hand; BORDER-BOTTOM: 0px outset; HEIGHT: 20px
+}
+.buttons3 {
+	BORDER-RIGHT: 0px outset; BORDER-TOP: 0px outset; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../images/botton_back3.gif); BORDER-LEFT: 0px outset; WIDTH: 139px; CURSOR: hand; COLOR: #ffffff; BORDER-BOTTOM: 0px outset; HEIGHT: 20px
+}
+.buttons4 {
+	BORDER-RIGHT: 0px outset; BORDER-TOP: 0px outset; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../images/botton_back4.gif); BORDER-LEFT: 0px outset; WIDTH: 130px; CURSOR: hand; COLOR: #000000; BORDER-BOTTOM: 0px outset; HEIGHT: 20px
+}
+.buttons5 {
+	BORDER-RIGHT: 0px outset; BORDER-TOP: 0px outset; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../images/botton_back4.gif); BORDER-LEFT: 0px outset; WIDTH: 41px; CURSOR: hand; COLOR: #000000; BORDER-BOTTOM: 0px outset; HEIGHT: 20px
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #bfc1c3; FONT-FAMILY: Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+A.myLink:link {
+	FONT: bold 12px Verdana, Arial, sans-serif; COLOR: #396395; TEXT-DECORATION: none
+}
+A.myLink:visited {
+	FONT: bold 12px Verdana, Arial, sans-serif; COLOR: #396395; TEXT-DECORATION: none
+}
+A.myLink:hover {
+	FONT: bold 12px Verdana, Arial, sans-serif; COLOR: #396395; TEXT-DECORATION: none
+}
+A.myLink_1:link {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #396395; TEXT-DECORATION: none
+}
+A.myLink_1:visited {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #396395; TEXT-DECORATION: none
+}
+A.myLink_1:hover {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #396395; TEXT-DECORATION: none
+}
+A.myLink1:link {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #000000; TEXT-DECORATION: none
+}
+A.myLink1:visited {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #000000; TEXT-DECORATION: none
+}
+A.myLink1:hover {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #000000; TEXT-DECORATION: none
+}
+A.myLink2:link {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #000000; TEXT-DECORATION: none
+}
+A.myLink2:visited {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #000000; TEXT-DECORATION: none
+}
+A.myLink2:hover {
+	FONT: 12px Verdana, Arial, sans-serif; COLOR: #000000; TEXT-DECORATION: none
+}
+BODY {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 0px; BORDER-LEFT: 0px; COLOR: black; LINE-HEIGHT: 15px; BORDER-BOTTOM: 0px; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+BR {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+DIV {
+	FONT-SIZE: 12px; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+EM {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; TEXT-TRANSFORM: none; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+B {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+H1 {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.title_text {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+.path {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+.left_td {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 10pt; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.right_td {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 10pt; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.bottom_td {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 10pt; BACKGROUND-COLOR: #1c5290; TEXT-DECORATION: none
+}
+.tab {
+	BEHAVIOR: url("js/table.htc")
+}
+.tab_table {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #000000; TEXT-DECORATION: none
+}
+.tab_label {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #afc8e7; TEXT-DECORATION: none
+}
+.tab_tr1 {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tab_tr2 {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #e7e8ed; TEXT-DECORATION: none
+}
+.formlabel {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 16pt; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #e6edf7; TEXT-DECORATION: none
+}
+.formcontent {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.formtext {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+.formselect {
+	BORDER-RIGHT: #4cabef 0px; BORDER-TOP: #4cabef 0px; FONT-SIZE: 12px; BACKGROUND: #ffffff; BORDER-LEFT: #4cabef 0px; COLOR: #000000; BORDER-BOTTOM: #4cabef 0px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.listtable {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #000000; TEXT-DECORATION: none
+}
+.listlabel {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 16pt; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #e6edf7; TEXT-DECORATION: none
+}
+.listcontent {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.querylabel {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 15pt; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none; ffont-family: "Verdana, Arial, sans-serif"
+}
+.querycontent {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 15pt; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.querytext {
+	BORDER-RIGHT: #9a9a9a 1px solid; BORDER-TOP: #9a9a9a 1px solid; FONT-SIZE: 12px; BACKGROUND: #ffffff; BORDER-LEFT: #9a9a9a 1px solid; COLOR: #646464; BORDER-BOTTOM: #9a9a9a 1px solid; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.querygrid {
+	BORDER-RIGHT: #0c75db 1px solid; BORDER-TOP: #0c75db 1px solid; FONT-SIZE: 12px; BACKGROUND: #daedfe; BORDER-LEFT: #0c75db 1px solid; COLOR: #07437d; BORDER-BOTTOM: #0c75db 1px solid; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.queryselect {
+	BORDER-RIGHT: #4cabef 1px solid; BORDER-TOP: #4cabef 1px solid; FONT-SIZE: 12px; BACKGROUND: #a3aaa2; BORDER-LEFT: #4cabef 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #4cabef 1px solid; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.normallabel {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 16pt; TEXT-DECORATION: none
+}
+.big_font {
+	FONT: bold 11pt Verdana, Arial, sans-serif; COLOR: #14375f
+}
+.big_font2 {
+	FONT: bold 11pt Verdana, Arial, sans-serif; COLOR: #ffffff
+}
+.big_font3 {
+	FONT: bold 13pt Verdana, Arial, sans-serif; COLOR: #dc1d1d
+}
+.bg_font2 {
+	BACKGROUND-COLOR: #205394
+}
+.bg_font2_table {
+	BACKGROUND-COLOR: #bfc1c3
+}
+.bg_font2_tr {
+	BACKGROUND-COLOR: #ffffff
+}
+.tab_table_xiao {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #b5b5b5; TEXT-DECORATION: none
+}
+.tab_table_xiao_tr {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #f1f3ed; TEXT-DECORATION: none
+}
+.tab_label_xiao {
+	BACKGROUND-IMAGE: url(../images/index_xiao_windows_back.gif); FONT: bold 12px Verdana, Arial, sans-serif; COLOR: #000000; TEXT-DECORATION: none
+}
+.tab_tr_xiao {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tab_tr2_xiao {
+	FONT: bold 12px Verdana, Arial, sans-serif; COLOR: #000000; BACKGROUND-COLOR: #e7e8ed; TEXT-DECORATION: none
+}
+.TDA {
+	BORDER-RIGHT: #669ed4 1px solid; BORDER-TOP: #669ed4 1px solid; BACKGROUND: #e8f1ff; BORDER-LEFT: #669ed4 0px solid; BORDER-BOTTOM: #669ed4 1px solid
+}
+.TDB {
+	BORDER-RIGHT: #669ed4 1px solid; BORDER-TOP: #669ed4 0px solid; BORDER-LEFT: #669ed4 0px solid; BORDER-BOTTOM: #669ed4 1px solid
+}
+.TDC {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #b5cae2; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 0px solid
+}
+.TDD {
+	BORDER-RIGHT: #669ed4 1px solid; BORDER-TOP: #669ed4 0px solid; BACKGROUND: #dcedff; BORDER-LEFT: #669ed4 1px solid; BORDER-BOTTOM: #669ed4 1px solid
+}
+.TDE {
+	BORDER-RIGHT: #669ed4 1px solid; BORDER-TOP: #669ed4 1px solid; BACKGROUND: #dcedff; BORDER-LEFT: #669ed4 1px solid; BORDER-BOTTOM: #669ed4 1px solid
+}
+.TDF {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #669ed4 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #669ed4 1px solid
+}
+.TDG {
+	BORDER-RIGHT: #669ed4 0px solid; BORDER-TOP: #669ed4 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #669ed4 0px solid; BORDER-BOTTOM: #669ed4 0px solid
+}
+.TDH {
+	BORDER-RIGHT: #3cb371 0px solid; BORDER-TOP: #3cb371 1px solid; BACKGROUND: #ffebcd; BORDER-LEFT: #3cb371 0px solid; BORDER-BOTTOM: #3cb371 0px solid
+}
+.TDI {
+	BORDER-RIGHT: #3cb371 1px solid; BORDER-TOP: #3cb371 1px solid; BACKGROUND: #ffebcd; BORDER-LEFT: #3cb371 1px solid; BORDER-BOTTOM: #3cb371 1px solid
+}
+.TDJ {
+	BORDER-RIGHT: #ffebcd 1px solid; BORDER-TOP: #ffebcd 1px solid; BACKGROUND: #ffebcd; BORDER-LEFT: #ffebcd 1px solid; BORDER-BOTTOM: #ffebcd 1px solid
+}
+.TDK {
+	BORDER-RIGHT: #f0f0f0 1px solid; BORDER-TOP: #f0f0f0 1px solid; BACKGROUND: #f0f0f0; BORDER-LEFT: #f0f0f0 1px solid; BORDER-BOTTOM: #f0f0f0 1px solid
+}
+.TDL {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.TDM {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.TDN {
+	BORDER-RIGHT: #e8f1ff 1px solid; BORDER-TOP: #e8f1ff 1px solid; BACKGROUND: #e8f1ff; BORDER-LEFT: #e8f1ff 1px solid; BORDER-BOTTOM: #e8f1ff 1px solid
+}
+.TDO {
+	BORDER-RIGHT: #83d9f1 1px solid; BORDER-TOP: #83d9f1 1px solid; BACKGROUND: #83d9f1; BORDER-LEFT: #83d9f1 1px solid; BORDER-BOTTOM: #83d9f1 1px solid
+}
+.TDP {
+	BORDER-RIGHT: #669ed4 1px solid; BORDER-TOP: #669ed4 1px solid; BACKGROUND: #e8f1ff; BORDER-LEFT: #669ed4 1px solid; BORDER-BOTTOM: #669ed4 1px solid
+}
+.TDQ {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.TDR {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #ffffff; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 0px solid
+}
+.TDS {
+	BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #ffffff; BORDER-LEFT: #000000 0px solid; BORDER-BOTTOM: #769ac7 2px solid
+}
+.TDT {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #769ac7; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.TDU {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #ffffff; BORDER-LEFT: #000000 0px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.TDV {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #ffffff; BORDER-LEFT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid
+}
+.TDW {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #b5cae4; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 0px solid
+}
+.TDX {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BACKGROUND: #769ac7; BORDER-LEFT: #000000 0px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.TDY {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; BACKGROUND: #cad8ea; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 0px solid
+}
+.TDZ {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BACKGROUND: #769ac7; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.userData {
+	BEHAVIOR: url(#default#userdata)
+}
+.input {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; FONT-SIZE: 12px; BORDER-LEFT: 0px solid; BORDER-BOTTOM: #496cbe 1px solid
+}
+.input2 {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 12px; BEHAVIOR: url(#default#savehistory); BORDER-LEFT: #999999 1px solid; WIDTH: 150px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffff99
+}
+.textarea {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #999999 1px solid; WIDTH: 680px; BORDER-BOTTOM: #999999 1px solid
+}

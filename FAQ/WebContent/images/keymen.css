@@ -1,0 +1,61 @@
+.maintxt {
+	font-family: "宋体";
+	font-size: 10pt;
+	line-height: 25px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.navtxt {
+	font-family: "宋体";
+	font-size: 10pt;
+	line-height: 25px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.answertxt {
+	font-family: "宋体";
+	font-size: 10pt;
+	line-height: 25px;
+	font-weight: normal;
+	color: #ff0000;
+}
+
+
+.maintitle {
+	font-family: "宋体";
+	font-size: 10pt;
+	line-height: 25px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.maintitle2 {
+	font-family: "宋体";
+	font-size: 12pt;
+	line-height: 25px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.leftkey {
+	font-family: "宋体";
+	font-size: 10pt;
+	line-height: 20px;
+	font-weight: bold;
+	color: #ff0000;
+}
+
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #EA0000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}

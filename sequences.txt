@@ -1,0 +1,32 @@
+create sequence MY_SEQUENCE
+minvalue 1
+maxvalue 999
+start with 181
+increment by 1
+cache 20;
+
+
+create sequence RESPONSE_QUESTION_ID
+minvalue 1
+maxvalue 99999
+start with 51
+increment by 1
+cache 10
+order;
+
+-- Create sequence 
+create sequence ROLE_POWER_SEQU
+minvalue 1
+maxvalue 10000
+start with 161
+increment by 1
+cache 10
+order;
+
+create sequence SEQUENCES
+minvalue 1
+maxvalue 10000
+start with 41
+increment by 1
+cache 10
+order;
