@@ -1,79 +1,80 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
+<%@ page language="java" pageEncoding="utf-8" %>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-
 <html>
 <head>
-  
-  <title>»ú¹¹¹ÜÀí</title>
-   <base href="<%=basePath%>">
-  <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <title>æœºæ„ç®¡ç†</title>
+    <base href="<%=basePath%>">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-location">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-location">
     <tr>
-      <td height=25><img src="../images/web_icon01.gif" width="11" height="8" align="absmiddle"> µ±Ç°Î»ÖÃ£º·ÖÅä½ÇÉ«</td>
+        <td height=25><img src="../images/web_icon01.gif" width="11" height="8" align="absmiddle"> å½“å‰ä½ç½®ï¼šåˆ†é…è§’è‰²</td>
     </tr>
-  </table>
-  <table align="center" class="table-list">
+</table>
+<table align="center" class="table-list">
     <tr>
-      <td valign="top">
-        <form name="form1" method="post" action="org_info.html">
-          <table align="center" class="table-form">
-            <tr>
-              <td colspan="4" class="table-title"> ·ÖÅä½ÇÉ«</td>
-            </tr>
-            <tr>
-              <td width="15%" class="table-list_title">ËùÔÚ»ú¹¹</td>
-              <td width="35%">ºÓÄÏÊ¡·Ö¹«Ë¾Íø¹ÜÖĞĞÄÍø¹ÜÊÒ</td>
-              <td width="15%" class="table-list_title">Ö°Î»ÀàĞÍ</td>
-              <td width="35%">Ò»°ã¹¤×÷ÈËÔ±</td>
-            </tr>
-            <tr>
-              <td class="table-list_title">Ö°Î»Ãû³Æ </td>
-              <td>Íø¹ÜÊÒEOMS×é×éÔ±</td>
-              <td class="table-list_title">Ö°Î»ÃèÊö</td>
-              <td>EOMSÏîÄ¿Î¬»¤¹ÜÀí</td>
-            </tr>
-          </table>
-          <br>
-          <table border="0" align="center" cellspacing="0" class="table-button">
-            <tr>
-              <td>
-                <iframe name="left" width="250" height="300" src="left.html"></iframe>
-              </td>
-              <td width="40"> <input onClick="javascript:left.rightToLeft()" type="button" value="<<--" name="addUsers" class="cancle"> <br>
+        <td valign="top">
+            <form name="form1" method="post" action="org_info.html">
+                <table align="center" class="table-form">
+                    <tr>
+                        <td colspan="4" class="table-title"> åˆ†é…è§’è‰²</td>
+                    </tr>
+                    <tr>
+                        <td width="15%" class="table-list_title">æ‰€åœ¨æœºæ„</td>
+                        <td width="35%">æ²³å—çœåˆ†å…¬å¸ç½‘ç®¡ä¸­å¿ƒç½‘ç®¡å®¤</td>
+                        <td width="15%" class="table-list_title">èŒä½ç±»å‹</td>
+                        <td width="35%">ä¸€èˆ¬å·¥ä½œäººå‘˜</td>
+                    </tr>
+                    <tr>
+                        <td class="table-list_title">èŒä½åç§°</td>
+                        <td>ç½‘ç®¡å®¤EOMSç»„ç»„å‘˜</td>
+                        <td class="table-list_title">èŒä½æè¿°</td>
+                        <td>EOMSé¡¹ç›®ç»´æŠ¤ç®¡ç†</td>
+                    </tr>
+                </table>
                 <br>
-                <input onClick="javascript:right.leftToRight()" type="button" value="-->>" name="removeUsers" class="cancle"> </td>
-              <td>
-                <iframe width="250" height="300" src="right.html" name="right"></iframe>
-              </td>
-            </tr>
-          </table>
-          <table align="center" cellpadding="0" cellspacing="6" class="table-button">
-            <tr>
-              <td><input name="submit" type="button" class="cancle" value="±£´æ" > <input name="reset" type="submit"  class="cancle" value="·µ»Ø"  > </td>
-            </tr>
-          </table>
-        </form>
-      </td>
+                <table border="0" align="center" cellspacing="0" class="table-button">
+                    <tr>
+                        <td>
+                            <iframe name="left" width="250" height="300" src="left.html"></iframe>
+                        </td>
+                        <td width="40"><input onClick="javascript:left.rightToLeft()" type="button" value="<<--"
+                                              name="addUsers" class="cancle"> <br>
+                            <br>
+                            <input onClick="javascript:right.leftToRight()" type="button" value="-->>"
+                                   name="removeUsers" class="cancle"></td>
+                        <td>
+                            <iframe width="250" height="300" src="right.html" name="right"></iframe>
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="6" class="table-button">
+                    <tr>
+                        <td><input name="submit" type="button" class="cancle" value="ä¿å­˜"> <input name="reset"
+                                                                                                 type="submit"
+                                                                                                 class="cancle"
+                                                                                                 value="è¿”å›"></td>
+                    </tr>
+                </table>
+            </form>
+        </td>
     </tr>
-  </table>
+</table>
 </body>
 </html>
 <script language="jscript">
-    function beforeSubmit()
-    {
+    function beforeSubmit() {
         document.mainForm.newStr.value = left.rootTree.getAllOther();
         document.mainForm.submitButton.disabled = true;
         document.mainForm.cancleButton.disabled = true;
         document.mainForm.submit();
     }
 
-    function cancle()
-    {
+    function cancle() {
         window.location = "#";
     }
 </script>

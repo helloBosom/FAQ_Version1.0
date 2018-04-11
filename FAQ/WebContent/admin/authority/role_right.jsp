@@ -1,166 +1,150 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
+<%@ page language="java" pageEncoding="utf-8" %>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <html>
 <head>
-  
-  <title>²Ëµ¥</title>
-   <base href="<%=basePath%>">
-  <link href="../css/main.css" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="../js/frame/xtree1.js"></script>
-  <script type="text/javascript" src="../js/frame/frame1.js"></script>
-  <script language="javascript">
-function TransTree(src,dest)
-{
-  this.srcTree=src;
-  this.destTree=dest;
-  this.obj = this.srcTree.getSelected();  //Ñ¡ÖĞµÄ½Úµã
-  this.parentObj = this.srcTree.getSelected().parentNode;  //Áô×Å×îºóÓÃ
+    <title>èœå•</title>
+    <base href="<%=basePath%>">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/frame/xtree1.js"></script>
+    <script type="text/javascript" src="../js/frame/frame1.js"></script>
+    <script language="javascript">
+        function TransTree(src, dest) {
+            this.srcTree = src;
+            this.destTree = dest;
+            this.obj = this.srcTree.getSelected();  //é€‰ä¸­çš„èŠ‚ç‚¹
+            this.parentObj = this.srcTree.getSelected().parentNode;  //ç•™ç€æœ€åç”¨
+            //é€šè¿‡otheræ‰¾obj   destTree,other
+            this.getObjByOther = function (treeNode, other) {
+                var obj;
+                if (treeNode.other == other) return treeNode;
+                for (var i = 0; i < treeNode.childNodes.length; i++) {
+                    obj = this.getObjByOther(treeNode.childNodes[i], other);
+                    if (obj) break;
+                }
+                return obj;
+            }
 
-  //Í¨¹ıotherÕÒobj   destTree,other
-  this.getObjByOther=function(treeNode,other)
-  {
-     var obj;
-     if(treeNode.other==other) return treeNode;
-     for(var i=0;i<treeNode.childNodes.length;i++)
-	  {
-	   obj=this.getObjByOther(treeNode.childNodes[i],other);
-	   if(obj) break;
-	  }
-	 return obj;
-  }
+            //ä¸¤ä¸ªroottreeçš„otherå¿…é¡»ç›¸åŒ
+            this.tran = function () {
+                var allOther = this.destTree.getAllOther();
+                var parentObj = this.obj.parentNode;
+                var lastParentObj = this.obj; //ä¸Šä¸ªparentobj
 
-  //Á½¸öroottreeµÄother±ØĞëÏàÍ¬
- this.tran=function()
- {
-   var allOther=this.destTree.getAllOther();
-   var parentObj=this.obj.parentNode;
-   var lastParentObj=this.obj; //ÉÏ¸öparentobj
+                //ä»é€‰ä¸­èŠ‚ç‚¹è±¡ä¸Šé€’å½’ï¼Œç›´åˆ°æ‰¾åˆ°ç›¸åŒçš„çˆ¶èŠ‚ç‚¹
+                var parentOther = new Array();
+                var parentText = new Array();
+                var i = 0;
+                while (parentObj && (allOther.indexOf(parentObj.other) < 0)) {
+                    parentOther[i] = parentObj.other;
+                    parentText[i] = parentObj.text;
+                    i = i + 1;
+                    lastParentObj = parentObj;
+                    parentObj = parentObj.parentNode;
+                }
 
-   //´ÓÑ¡ÖĞ½ÚµãÏóÉÏµİ¹é£¬Ö±µ½ÕÒµ½ÏàÍ¬µÄ¸¸½Úµã
-   var parentOther=new Array();
-   var parentText=new Array();
-   var i=0;
-   while(parentObj && (allOther.indexOf(parentObj.other)<0))
-    {
-        parentOther[i]=parentObj.other;
-		parentText[i]=parentObj.text;
-		i=i+1;
-		lastParentObj=parentObj;
-		parentObj=parentObj.parentNode;
-	}
+                if (!parentObj) parentObj = lastParentObj;  //parentObjæ˜¯è¡¨ç¤ºæœ€ä¸Šå±‚ä¸€è‡´çš„
 
-  if(!parentObj) parentObj=lastParentObj;  //parentObjÊÇ±íÊ¾×îÉÏ²ãÒ»ÖÂµÄ
+                //ä¸Šé¢çš„parentobjæ˜¯srctreeçš„
+                //ä¸‹é¢å¾—åˆ°desttreeçš„parentobj(ä¸srctreeç›¸åŒå±‚æ¬¡)
+                parentObj = this.getObjByOther(this.destTree, parentObj.other);
+                for (var j = i - 1; j >= 0; j--) {
+                    parentObj = parentObj.add(new WebFXTreeItem(parentText[j], null, null, parentOther[j], false));
+                }
 
-  //ÉÏÃæµÄparentobjÊÇsrctreeµÄ
-  //ÏÂÃæµÃµ½desttreeµÄparentobj(ÓësrctreeÏàÍ¬²ã´Î)
-  parentObj=this.getObjByOther(this.destTree,parentObj.other);
-  for(var j=i-1;j>=0;j--)
-   {
-        parentObj=parentObj.add(new WebFXTreeItem(parentText[j],null,null,parentOther[j],false));
-   }
+                //å»ºé€‰ç§çš„é‚£ä¸ªobjï¼Œè¦åˆ¤æ–­æ˜¯ä¸æ˜¯å·²ç»æœ‰è¿™ä¸ªå±‚äº†
+                var destObj;
+                if (this.getObjByOther(parentObj, this.obj.other) != null)
+                    destObj = this.getObjByOther(parentObj, this.obj.other);
+                else
+                    destObj = parentObj.add(new WebFXTreeItem(this.obj.text, null, null, this.obj.other, false));
 
-   //½¨Ñ¡ÖÖµÄÄÇ¸öobj£¬ÒªÅĞ¶ÏÊÇ²»ÊÇÒÑ¾­ÓĞÕâ¸ö²ãÁË
-   var destObj;
-   if(this.getObjByOther(parentObj,this.obj.other)!=null)
-	      destObj= this.getObjByOther(parentObj,this.obj.other);
-   else
-       destObj=parentObj.add(new WebFXTreeItem(this.obj.text,null,null,this.obj.other,false));
+                //ä¼ é€‰ä¸­èŠ‚ç‚¹çš„æ‰€æœ‰å­èŠ‚ç‚¹
+                this.tranObj(this.obj, destObj);
 
-   //´«Ñ¡ÖĞ½ÚµãµÄËùÓĞ×Ó½Úµã
-   this.tranObj(this.obj,destObj);
+                //roottree
+                if (!this.obj.parentNode) {
+                    for (var i = this.obj.childNodes.length - 1; i >= 0; i--) {
+                        this.obj.childNodes[i].remove();
+                    }
+                }
+                else {
+                    this.obj.remove();
+                    //åˆ é™¤æ¥ç‚¹éƒ¨åˆ†ï¼Œå¦‚æœçˆ¶èŠ‚ç‚¹åªæœ‰ä¸€ä¸ªèŠ‚ç‚¹ï¼Œé‚£çˆ¶èŠ‚ç‚¹ä¹Ÿåˆ äº†
+                    while (this.parentObj && (this.parentObj.childNodes.length == 0)) {
+                        this.obj = this.parentObj;
+                        this.parentObj = this.parentObj.parentNode;
+                        this.obj.remove();
+                    }
+                }
 
-   //roottree
-   if(!this.obj.parentNode)
-     {
-	   for(var i=this.obj.childNodes.length-1;i>=0;i--)
-	    {
-	     this.obj.childNodes[i].remove();
-		 }
-	   }
-   else
-   {
-      this.obj.remove();
-   //É¾³ı½Óµã²¿·Ö£¬Èç¹û¸¸½ÚµãÖ»ÓĞÒ»¸ö½Úµã£¬ÄÇ¸¸½ÚµãÒ²É¾ÁË
-     while(this.parentObj && (this.parentObj.childNodes.length==0))
-     {
-	    this.obj=this.parentObj;
-	    this.parentObj=this.parentObj.parentNode;
-		this.obj.remove();
-	}
-	}
+                //åˆ·æ–°å¤„ç† è¶Šå¤„ç†è¶Šå·® è¿˜æ˜¯åˆ«å¤„ç†äº†
+                //this.destTree.indent();
+                this.destTree.expandAll();
+                this.destTree.collapseChildren();
 
-    //Ë¢ĞÂ´¦Àí Ô½´¦ÀíÔ½²î »¹ÊÇ±ğ´¦ÀíÁË
-	//this.destTree.indent();
-	this.destTree.expandAll();
-	this.destTree.collapseChildren();
+                if (destObj.childNodes.length > 0)
+                    destObj.expandAll();
+                else
+                    destObj.parentNode.expandAll();
+            }
 
-	if(destObj.childNodes.length>0)
-       destObj.expandAll();
-	else
-	  destObj.parentNode.expandAll();
- }
+            this.tranObj = function (srcObj, destObj) {
+                for (var i = 0; i < srcObj.childNodes.length; i++) {
+                    var tempDestObj;
+                    var tempSrcObj = srcObj.childNodes[i];
+                    if (this.getObjByOther(destObj, tempSrcObj.other) != null)
+                        tempDestObj = this.getObjByOther(destObj, tempSrcObj.other);
+                    else
+                        tempDestObj = destObj.add(new WebFXTreeItem(tempSrcObj.text, null, null, tempSrcObj.other, false));
+                    this.tranObj(tempSrcObj, tempDestObj);
+                }
+            }
+        }
 
- this.tranObj=function(srcObj,destObj)
- {
-    for(var i=0;i<srcObj.childNodes.length;i++)
-	 {
-	    var tempDestObj;
-	    var tempSrcObj=srcObj.childNodes[i];
-		if(this.getObjByOther(destObj,tempSrcObj.other)!=null)
-		   tempDestObj=this.getObjByOther(destObj,tempSrcObj.other);
-		else
-	      tempDestObj=destObj.add(new WebFXTreeItem(tempSrcObj.text,null,null,tempSrcObj.other,false));
-		this.tranObj(tempSrcObj,tempDestObj);
-	  }
- }
-
-}
-
-function leftToRight(){
-	var left=new TransTree(parent.left.rootTree,rootTree);
-	left.tran();
-	return;
-	}
-
-</script>
+        function leftToRight() {
+            var left = new TransTree(parent.left.rootTree, rootTree);
+            left.tran();
+            return;
+        }
+    </script>
 </head>
 <body topmargin="0" bgcolor="#F4F7FB">
-  <table border="0">
+<table border="0">
     <tr>
-      <td nowrap>
-        <script type="text/javascript">
-                /*Ò»¼¶²Ëµ¥*/
-                var rootTree = new WebFXTree('ÒÑ·ÖÅäÈ¨ÏŞ');
-                
-				/*¶ş¼¶²Ëµ¥*/    
-				var folder1 = new WebFXTreeItem('ÏµÍ³¹ÜÀíÎ¬»¤', null, null, null, true);
-				rootTree.add(folder1);  
-				var folder2 = new WebFXTreeItem('Í¶Ëß¹¤µ¥', null, null, null, true);
-				rootTree.add(folder2); 
+        <td nowrap>
+            <script type="text/javascript">
+                /*ä¸€çº§èœå•*/
+                var rootTree = new WebFXTree('å·²åˆ†é…æƒé™');
 
-                /*Èı¼¶²Ëµ¥*/
-                var item1_1 = new WebFXTreeItem("Ö°Î»´úÀí");
+                /*äºŒçº§èœå•*/
+                var folder1 = new WebFXTreeItem('ç³»ç»Ÿç®¡ç†ç»´æŠ¤', null, null, null, true);
+                rootTree.add(folder1);
+                var folder2 = new WebFXTreeItem('æŠ•è¯‰å·¥å•', null, null, null, true);
+                rootTree.add(folder2);
+
+                /*ä¸‰çº§èœå•*/
+                var item1_1 = new WebFXTreeItem("èŒä½ä»£ç†");
                 folder1.add(item1_1);
-				var item1_2 = new WebFXTreeItem("³·ÏúÖ°Î»´úÀí");
-                folder1.add(item1_2);	
-				
-				var item6_1 = new WebFXTreeItem("ĞÂÔö¹¤µ¥", "javascript:toURL('ĞÂÔö¹¤µ¥','../order/list1.jsp')");
-                folder2.add(item6_1);	
-				var item6_2 = new WebFXTreeItem("ÎÒµÄ¹¤×÷", "javascript:toURL('ÎÒµÄ¹¤×÷','../order/undoorder_list.jsp')");
-                folder2.add(item6_2);	
-				var item6_3 = new WebFXTreeItem("ÒÑ²Ù×÷¹¤µ¥", "javascript:toURL('ÒÑ²Ù×÷¹¤µ¥','../order/order_list.jsp')");
-                folder2.add(item6_3);	
-				var item6_4 = new WebFXTreeItem("¹¤µ¥²éÑ¯", "javascript:toURL('¹¤µ¥²éÑ¯','../order/search_list.jsp')");
+                var item1_2 = new WebFXTreeItem("æ’¤é”€èŒä½ä»£ç†");
+                folder1.add(item1_2);
+
+                var item6_1 = new WebFXTreeItem("æ–°å¢å·¥å•", "javascript:toURL('æ–°å¢å·¥å•','../order/list1.jsp')");
+                folder2.add(item6_1);
+                var item6_2 = new WebFXTreeItem("æˆ‘çš„å·¥ä½œ", "javascript:toURL('æˆ‘çš„å·¥ä½œ','../order/undoorder_list.jsp')");
+                folder2.add(item6_2);
+                var item6_3 = new WebFXTreeItem("å·²æ“ä½œå·¥å•", "javascript:toURL('å·²æ“ä½œå·¥å•','../order/order_list.jsp')");
+                folder2.add(item6_3);
+                var item6_4 = new WebFXTreeItem("å·¥å•æŸ¥è¯¢", "javascript:toURL('å·¥å•æŸ¥è¯¢','../order/search_list.jsp')");
                 folder2.add(item6_4);
 
                 document.write(rootTree);
                 rootTree.expand();
             </script>
-      </td>
+        </td>
     </tr>
-  </table>
+</table>
 </body>
 </html>

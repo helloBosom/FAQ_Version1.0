@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
+<%@ page language="java" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
@@ -116,16 +116,20 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="<%=path %>/IndexServlet?method=queryQuestionType1"><img src="admin/images/userreg.gif"
-                                                                                         width="200" height="32"
-                                                                                         border="0"></a></td>
+                    <td>
+                        <a href="<%=path %>/IndexServlet?method=queryQuestionType1">
+                            <img src="admin/images/userreg.gif" width="200" height="32" border="0">
+                        </a>
+                    </td>
                 </tr>
             </table>
             <br>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td><a href="<%=path %>/IndexServlet?method=queryQuestionType"><img src="admin/images/question.gif"
-                                                                                        width="200" height="40"></a>
+                    <td>
+                        <a href="<%=path %>/IndexServlet?method=queryQuestionType">
+                            <img src="admin/images/question.gif" width="200" height="40">
+                        </a>
                     </td>
                 </tr>
             </table>
@@ -201,7 +205,6 @@
                                     </c:forEach>
                                 </c:otherwise>
                             </c:choose>
-
                         </table>
                         <br>
                         <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000">
@@ -247,7 +250,8 @@
             <br>
             <br>
             <br>
-            <br></td>
+            <br>
+        </td>
     </tr>
 </table>
 </body>

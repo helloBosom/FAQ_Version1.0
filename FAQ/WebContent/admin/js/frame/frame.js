@@ -1,9 +1,3 @@
-/**
- Title:¿ò¼Ü¿ØÖÆËùĞèÒªµÄJS´úÂë
- author:ºî²©
- date:2005Äê07-07ÈÕ
- */
-
 //var rootpath = "/TopIcms";
 var webroot = document.location.href;
 webroot = webroot.substring(webroot.indexOf('//') + 2, webroot.length);
@@ -11,12 +5,11 @@ webroot = webroot.substring(webroot.indexOf('/') + 1, webroot.length);
 webroot = webroot.substring(0, webroot.indexOf('/'));
 var rootpath = '/' + webroot;
 
-/*ÒÔÏÂ¼¸¸ö·½·¨ÊÇÀûDreamweaver×Ô¶¯²úÉúµÄ´úÂë£¬Ö÷ÒªÓÃÓÚ¿ØÖÆÍ¼Æ¬µÄ±ä»»Ğ§¹û*/
 function MM_preloadImages() { //v3.0
     var d = document;
     if (d.images) {
         if (!d.MM_p) d.MM_p = new Array();
-        var i,j = d.MM_p.length,a = MM_preloadImages.arguments;
+        var i, j = d.MM_p.length, a = MM_preloadImages.arguments;
         for (i = 0; i < a.length; i++)
             if (a[i].indexOf("#") != 0) {
                 d.MM_p[j] = new Image;
@@ -26,12 +19,12 @@ function MM_preloadImages() { //v3.0
 }
 
 function MM_swapImgRestore() { //v3.0
-    var i,x,a = document.MM_sr;
+    var i, x, a = document.MM_sr;
     for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
 }
 
 function MM_findObj(n, d) { //v4.01
-    var p,i,x;
+    var p, i, x;
     if (!d) d = document;
     if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
         d = parent.frames[n.substring(p + 1)].document;
@@ -45,7 +38,7 @@ function MM_findObj(n, d) { //v4.01
 }
 
 function MM_swapImage() { //v3.0
-    var i,j = 0,x,a = MM_swapImage.arguments;
+    var i, j = 0, x, a = MM_swapImage.arguments;
     document.MM_sr = new Array;
     for (i = 0; i < (a.length - 2); i += 3)
         if ((x = MM_findObj(a[i])) != null) {
@@ -55,7 +48,6 @@ function MM_swapImage() { //v3.0
         }
 }
 
-//Òş²ØÕû¸öÊÓÍ¼Çø
 function hideViewArea() {
     top.main.cols = "6,*";
     top.viewFrame.viewArea.cols = "0,6";
@@ -65,7 +57,6 @@ function hideViewArea() {
     imageId.innerHTML = imgSrc;
 }
 
-//ÏÔÊ¾Õû¸öÊÓÍ¼Çø
 function showViewArea() {
     top.main.cols = "180,*";
     top.viewFrame.viewArea.cols = "170,6";
@@ -75,43 +66,35 @@ function showViewArea() {
 
 }
 
-
-
-
-//²Ëµ¥×ªÏòÊ±°ÑÒ³Ãæ±êÌâÌáµ½headFrameÖĞÈ¥£¬È»ºóÔÚ¸Ä±äÖ÷Ò³ÃæµÄhrefµØÖ·
 function toURL(name, url) {
-    //°ÑÒ³Ãæ±êÌâÌá½»µ½HeadÒ³ÃæÖĞ
     //top.headFrame.pageTitle.value = name;
-    //Çå¿Õµ¼º½À¸£¬²¢Òş²Ø
     //clearNavList();
-    //Ìø×ªÒ³Ãæ
     top.mainFrame.location.href = url;
 }
 
-//²¼¾Ö¿ò¼ÜÒ³ÃæÖĞÌáÈ¡headFrameÖĞÌâµÄÖµ
 function getPageTitle() {
     var pageTitleStr = top.headFrame.pageTitle.value;
     var pageTitleId = document.getElementById("pageTitle");
     pageTitleId.innerHTML = pageTitleStr;
 }
 
-//µ¼º½À¸ÉÏµÄ×ÊÁÏÈë¿Ú
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function navToURL(url) {
     //    top.headFrame.isShowNav.value = 'true';
     top.mainFrame.location.href = url;
 }
 
 
-/** -----------------µ¼º½À¸Ê¹ÓÃµÄº¯Êı--------------------- **/
+/** -----------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄºï¿½ï¿½ï¿½--------------------- **/
 //checks browser and sets up layers accordingly
 //var path = "default/images/navigate/";
 var path = rootpath + "/frame/" + "default/images/navigate/";
-//imgArray ÊÇÒ»¸ö¶şÎ¬Êı×é£º[imgName,on_img_src,off_img_src]
+//imgArray ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½é£º[imgName,on_img_src,off_img_src]
 var imgArray = [
-        ["img1",path + "tab1_on.gif", path + "tab1_off.gif"] ,
-        ["img2",path + "tab2_on.gif", path + "tab2_off.gif"] ]
+    ["img1", path + "tab1_on.gif", path + "tab1_off.gif"],
+    ["img2", path + "tab2_on.gif", path + "tab2_off.gif"]]
 
-//ÏÔÊ¾µ¼º½À¸ÖĞµÄµÚÒ»¸öÃæ°å£¬²¢Òş²ØÆäËûÃæ°å
+//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ĞµÄµï¿½Ò»ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function showOne() {
     initnavigate();
     updateTabs('img1');
@@ -120,7 +103,7 @@ function showOne() {
     showNavigateView();
 }
 
-//ÏÔÊ¾µ¼º½À¸ÖĞµÄµÚ¶ş¸öÃæ°å£¬²¢Òş²ØÆäËûÃæ°å
+//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ĞµÄµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function showTwo() {
     initnavigate();
     updateTabs('img2');
@@ -169,56 +152,56 @@ function updateTabs(imgName) {
 }
 
 
-/**-------------------´íÎóÌáÊ¾Ê¹ÓÃµÄº¯Êı-----------------**/
-//¾Û½¹µ½´íÎóÓòÖĞ
+/**-------------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ê¹ï¿½ÃµÄºï¿½ï¿½ï¿½-----------------**/
+//ï¿½Û½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function errorFocus(errId) {
     top.mainFrame.document.all(errId).focus();
 }
 
-//Ìî³ä´íÎóĞÅÏ¢µ½´íÎóÌáÊ¾Ãæ°åÖĞ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½
 function fillError() {
     var tdiv = top.viewFrame.navigateFrame.document.getElementById('error_id');
-    //Îª½â¾ö»ú¹¹¹ÜÀí£¨aaf£©ÖĞµÄjs´íÎó£¬ÔÚ2006Äê3ÔÂ31ÈÕ±»ÆÈÔÚ´Ë½øĞĞĞŞ¸Ä
-    //Ô­À´´úÂëÎª£ºtdiv.innerHTML = top.mainFrame.document.all("__errorInfo").innerHTML;
+    //Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½aafï¿½ï¿½ï¿½Ğµï¿½jsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2006ï¿½ï¿½3ï¿½ï¿½31ï¿½Õ±ï¿½ï¿½ï¿½ï¿½Ú´Ë½ï¿½ï¿½ï¿½ï¿½Ş¸ï¿½
+    //Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½tdiv.innerHTML = top.mainFrame.document.all("__errorInfo").innerHTML;
     //wangpu
     tdiv.innerHTML = document.all("__errorInfo").innerHTML;
 }
 
-//Ìî³äµ¼º½ÁĞ±íµ½µ¼º½Ãæ°åÖĞ
+//ï¿½ï¿½äµ¼ï¿½ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function fillNavList() {
     var tdiv = top.viewFrame.navigateFrame.document.getElementById('nav_id');
     tdiv.innerHTML = top.mainFrame.document.all("__nav_id").innerHTML;
 }
 
-//Ìî³äµ¼º½ÁĞ±í£¬²¢ÏÔÊ¾µ¼º½ÁĞ±í
+//ï¿½ï¿½äµ¼ï¿½ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½
 function fillNavAndShow() {
-    //Ìî³äµ¼º½À¸µ¼º½ÄÚÈİ
+    //ï¿½ï¿½äµ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     fillNavList();
-    //ÏÔÊ¾µ¼º½À¸
+    //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     showOne();
-    //ÉèÖÃµ¼º½À¸×´Ì¬ÎªÒş²Ø×´Ì¬
+    //ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬Îªï¿½ï¿½ï¿½ï¿½×´Ì¬
     top.headFrame.isShowNav.value = "true";
 }
 
-//Çå¿Õµ¼º½À¸ÁĞ±í£¬²¢Òş²Ø
+//ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function clearNavList() {
     var tdiv = top.viewFrame.navigateFrame.document.getElementById('nav_id');
     tdiv.innerHTML = "";
-    //ÉèÖÃµ¼º½À¸×´Ì¬ÎªÒş²Ø×´Ì¬
+    //ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬Îªï¿½ï¿½ï¿½ï¿½×´Ì¬
     top.headFrame.isShowNav.value = "false";
-    //Òş²Øµ¼º½À¸
+    //ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
     hideNavigateView();
 }
 
 
-//´Ó´íÎóÌáÊ¾Ãæ°åÖĞÇå¿Õ´íÎóĞÅÏ¢,²¢ÏÔÊ¾µ¼º½Ãæ°å
+//ï¿½Ó´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢,ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function clearError() {
     var tdiv = top.viewFrame.navigateFrame.document.getElementById('error_id');
     tdiv.innerHTML = "";
     if (top.headFrame.isShowNav.value == "true") {
-        //ÏÔÊ¾µ¼º½Ãæ°å
+        //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         showOne();
-    } else {//Òş²Øµ¼º½À¸
+    } else {//ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
         hideNavigateView();
     }
 }
@@ -238,27 +221,29 @@ function fillJsErrorAndShow(errs) {
     window.attachEvent("onunload", clearError);
 }
 
-//ÏÔÊ¾µÈ´ıÒ³Ãæ
+//ï¿½ï¿½Ê¾ï¿½È´ï¿½Ò³ï¿½ï¿½
 function _showWait() {
     var win = top.headFrame;
-    if (win == null)return;
-    if (win._wait != null)return;
+    if (win == null) return;
+    if (win._wait != null) return;
     win._wait = win.showModelessDialog(rootpath + "/page/frame/Loading.jsp", window, "dialogTop:550px;dialogLeft:750px;dialogHeight: 100px; dialogWidth: 200px; center: yes; help: no; scroll: no; status: no;");
     ;
 }
-//Òş²ØµÈ´ıÒ³Ãæ
+
+//ï¿½ï¿½ï¿½ØµÈ´ï¿½Ò³ï¿½ï¿½
 function _hiddenWait() {
     var win = top.headFrame;
-    if (win == null)return;
+    if (win == null) return;
     if (win._wait != null) {
-        if (!win._wait.closed)win._wait.close();
+        if (!win._wait.closed) win._wait.close();
         win._wait = null;
     }
 }
-//ÏÈÇå£¬ºóÌíÊÂ¼ş£¬·ÀÖ¹Ìí¼ÓÖØ¸´ÊÂ¼ş
-//ÇåÊÂ¼ş
+
+//ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Â¼ï¿½
+//ï¿½ï¿½ï¿½Â¼ï¿½
 //window.detachEvent("onload",_hiddenWait);
 //window.detachEvent("onunload",_showWait);
-////Ìí¼ÓÊÂ¼ş
+////ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 //window.attachEvent("onload",_hiddenWait);
 //window.attachEvent("onunload",_showWait);

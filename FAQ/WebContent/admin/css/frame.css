@@ -14,7 +14,6 @@ body {
     SCROLLBAR-TRACK-COLOR: #E7EFF9;
     SCROLLBAR-SHADOW-COLOR: #B0CFF4;
     SCROLLBAR-DARKSHADOW-COLOR: #5484BD;
-
 }
 
 .transverse-background-line {
@@ -293,7 +292,6 @@ a:hover {
 }
 
 .loginBackground {
-
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;

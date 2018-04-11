@@ -1,66 +1,71 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
+<%@ page language="java" pageEncoding="utf-8" %>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-
 <html>
 <head>
-  
-  <title>ª˙πππ‹¿Ì</title>
-  <base href="<%=basePath%>">
-  <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <title>Êú∫ÊûÑÁÆ°ÁêÜ</title>
+    <base href="<%=basePath%>">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-location">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-location">
     <tr>
-      <td height=25 bgcolor="#FFFFFF"><img src="../images/web_icon01.gif" width="11" height="8" align="absmiddle"> µ±«∞Œª÷√£∫Ω«…´√˚≥∆ - œµÕ≥Œ¨ª§ </td>
+        <td height=25 bgcolor="#FFFFFF"><img src="../images/web_icon01.gif" width="11" height="8" align="absmiddle">
+            ÂΩìÂâç‰ΩçÁΩÆÔºöËßíËâ≤ÂêçÁß∞ - Á≥ªÁªüÁª¥Êä§
+        </td>
     </tr>
-  </table>
-  <table align="center" class="table-list">
+</table>
+<table align="center" class="table-list">
     <tr>
-      <td>
-        <table class="table-table">
-          <tr>
-            <td class="table-title">Ω«…´√˚≥∆ - œµÕ≥Œ¨ª§</td>
-          </tr>
-        </table>
-        <form name="form1" method="post" action="order_list.html">
-          <table border="0" align="center" cellspacing="0" class="table-button">
-            <tr>
-              <td>
-                <iframe name="left" width="250" height="300" src="role_left.html"></iframe>
-              </td>
-              <td width="40"> <input onClick="javascript:left.rightToLeft()" type="button" value="<<--" name="addUsers" class="cancle"> <br>
-                <br>
-                <input onClick="javascript:right.leftToRight()" type="button" value="-->>" name="removeUsers" class="cancle"> </td>
-              <td>
-                <iframe width="250" height="300" src="role_right.html" name="right"></iframe>
-              </td>
-            </tr>
-          </table>
-          <table align="center" cellpadding="0" cellspacing="6" class="table-button">
-            <tr>
-              <td><input name="submit" type="button" class="cancle" value="±£¥Ê" > <input name="reset" type="submit"  class="cancle" value="∑µªÿ"  > </td>
-            </tr>
-          </table>
-        </form>
-      </td>
+        <td>
+            <table class="table-table">
+                <tr>
+                    <td class="table-title">ËßíËâ≤ÂêçÁß∞ - Á≥ªÁªüÁª¥Êä§</td>
+                </tr>
+            </table>
+            <form name="form1" method="post" action="order_list.html">
+                <table border="0" align="center" cellspacing="0" class="table-button">
+                    <tr>
+                        <td>
+                            <iframe name="left" width="250" height="300" src="role_left.html"></iframe>
+                        </td>
+                        <td width="40">
+                            <input onClick="javascript:left.rightToLeft()" type="button" value="<<--" name="addUsers"
+                                   class="cancle">
+                            <br>
+                            <br>
+                            <input onClick="javascript:right.leftToRight()" type="button" value="-->>"
+                                   name="removeUsers" class="cancle"></td>
+                        <td>
+                            <iframe width="250" height="300" src="role_right.html" name="right"></iframe>
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="6" class="table-button">
+                    <tr>
+                        <td>
+                            <input name="submit" type="button" class="cancle" value="‰øùÂ≠ò">
+                            <input name="reset" type="submit" class="cancle" value="ËøîÂõû">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
     </tr>
-  </table>
+</table>
 </body>
 </html>
 <script language="jscript">
-    function beforeSubmit()
-    {
+    function beforeSubmit() {
         document.mainForm.newStr.value = left.rootTree.getAllOther();
         document.mainForm.submitButton.disabled = true;
         document.mainForm.cancleButton.disabled = true;
         document.mainForm.submit();
     }
 
-    function cancle()
-    {
+    function cancle() {
         window.location = "#";
     }
 </script>

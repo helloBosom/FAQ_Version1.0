@@ -1,8 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="com.cissst.software.service.IQuestionClassifyService" %>
-<%@ page import="com.cissst.software.model.QuestionClassify" %>
-<%@ page import="com.cissst.software.model.User" %>
+<%@ page import="peri.fun.service.IQuestionClassifyService" %>
+<%@ page import="peri.fun.model.QuestionClassify" %>
+<%@ page import="peri.fun.model.User" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
